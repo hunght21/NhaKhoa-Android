@@ -5,15 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
-    tools:context=".activity.LoginActivity">
+    tools:context=".activity.InforAppointmentIdActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_infor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:navigationIcon="?attr/homeAsUpIndicator"
         app:titleMarginStart="80dp">
+        <ImageView
+            android:id="@+id/btn_back_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_back_real">
+        </ImageView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -157,12 +161,12 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_update"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        android:text="Cập nhật"
+        android:text="Thông tin"
         android:textAllCaps="false"
         android:layout_marginTop="40dp"
         android:background="@drawable/round_backl_primary"

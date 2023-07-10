@@ -188,7 +188,8 @@
                         android:background="@drawable/custom_button_main"
                         android:drawableTop="@drawable/baseline_insert_drive_file_24"
                         android:fontFamily="sans-serif"
-                        android:text="Thông tin cá nhân"
+                        android:text="Thông tin
+                        cá nhân"
                         android:textSize="12sp"
                         android:textStyle="normal" />
 
@@ -196,13 +197,15 @@
                         android:id="@+id/btn_phieu"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="6dp"
                         android:layout_weight="1"
                         android:textColor="@color/white"
                         android:background="@drawable/custom_button_main"
                         android:drawableTop="@drawable/baseline_card_travel_24"
                         android:fontFamily="sans-serif"
-                        android:text="Quản lý phiếu khám bệnh"
+                        android:text="Quản lý phiếu
+                        khám bệnh"
                         android:textSize="12sp"
                         android:textStyle="normal" />
 
@@ -216,7 +219,8 @@
                         android:background="@drawable/custom_button_main"
                         android:drawableTop="@drawable/baseline_speaker_notes_24"
                         android:fontFamily="sans-serif"
-                        android:text="Hướng dẫn đặt lịch "
+                        android:text="Hướng dẫn
+                         đặt lịch "
                         android:textSize="12sp"
                         android:textStyle="normal" />
 
@@ -249,7 +253,8 @@
                         android:drawableTop="@drawable/baseline_insert_drive_file_24"
                         android:fontFamily="sans-serif"
                         android:textColor="@color/white"
-                        android:text="Đơn thuốc của bạn"
+                        android:text="Đơn thuốc
+                         của bạn"
                         android:textSize="12sp"
                         android:textStyle="normal" />
                 </LinearLayout>
