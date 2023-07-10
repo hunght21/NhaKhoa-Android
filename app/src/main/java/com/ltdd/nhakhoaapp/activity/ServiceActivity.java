@@ -46,7 +46,7 @@ public class ServiceActivity extends AppCompatActivity {
         });
         recyclerView =findViewById(R.id.rc_service_detail);
         services = new ArrayList<>();
-        serviceListAdapter = new ServiceListAdapter(this);
+        serviceListAdapter = new ServiceListAdapter(ServiceActivity.this);
 
 
 
