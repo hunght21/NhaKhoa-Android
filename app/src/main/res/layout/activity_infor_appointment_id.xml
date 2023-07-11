@@ -144,7 +144,6 @@
             android:paddingStart="50dp"
             android:paddingEnd="20dp"
             android:textSize="16sp"
-            android:inputType="number"
             android:maxLines="1"
             />
         <ImageView
@@ -166,7 +165,7 @@
         android:layout_height="55dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        android:text="Thông tin"
+        android:text="Cập nhật"
         android:textAllCaps="false"
         android:layout_marginTop="40dp"
         android:background="@drawable/round_backl_primary"

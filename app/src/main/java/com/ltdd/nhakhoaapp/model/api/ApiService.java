@@ -56,6 +56,8 @@ public interface ApiService {
     @POST("newAppointment")
     Call<String> createAppointment(@Body Appointment appointment);
 
+    @POST("appointments/{id}")
+    Call<String> updateAppointmentById(@Body Appointment appointment, @Path("id") Long id);
 
     @POST("login")
     Call<Patient> login(@Query("email") String email, @Query("password") String password);

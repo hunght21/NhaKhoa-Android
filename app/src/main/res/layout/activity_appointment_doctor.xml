@@ -159,6 +159,7 @@
                 style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="none"
                 android:background="@drawable/button_selector"
                 android:textColorHint="#3F51B5"
                 android:textSize="20sp"

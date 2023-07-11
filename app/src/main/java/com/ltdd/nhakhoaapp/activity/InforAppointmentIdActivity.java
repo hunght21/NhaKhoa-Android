@@ -23,7 +23,7 @@ import retrofit2.Response;
 public class InforAppointmentIdActivity extends AppCompatActivity {
 
     private EditText edtName, edtDate, edtTime, edtNote,edtBacsi;
-    private Button btnBack;
+    private Button btnBack ,btnUpdate;
     Long doctorId;
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -35,14 +35,17 @@ public class InforAppointmentIdActivity extends AppCompatActivity {
         edtDate = findViewById(R.id.dateedt);
         edtTime = findViewById(R.id.timeedt);
         edtNote = findViewById(R.id.noteedt);
-        btnBack = findViewById(R.id.btn_back_2);
+        btnUpdate = findViewById(R.id.btn_update);
+     //   btnBack = findViewById(R.id.btn_back_2);
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+//        btnBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Intent intent =new Intent(InforAppointmentIdActivity.this, MainActivity.class);
+////                startActivity(intent);
+//                finish();
+//            }
+//        });
 
 
         Intent i = getIntent();
@@ -77,6 +80,40 @@ public class InforAppointmentIdActivity extends AppCompatActivity {
             }
         });
 
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Lấy dữ liệu từ người dùng
+                String appointmentDate = edtDate.getText().toString();
+                String period = edtTime.getText().toString();
+                String note = edtNote.getText().toString();
+
+
+                // Tạo đối tượng Appointment mới với dữ liệu từ người dùng
+                Appointment appointment = new Appointment(id, appointmentDate, period, note);
+
+                RetrofitClient.getRetrofit().updateAppointmentById(appointment,id).enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        if (response.isSuccessful()) {
+                            // Xử lý khi cập nhật thành công
+                            Toast.makeText(InforAppointmentIdActivity.this, "Update successful", Toast.LENGTH_SHORT).show();
+                        } else {
+                            // Xử lý khi cập nhật thất bại
+                            Toast.makeText(InforAppointmentIdActivity.this, "Update failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        Toast.makeText(InforAppointmentIdActivity.this, "API call failed", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+                finish();
+
+            }
+        });
 
     }
 }
