@@ -38,13 +38,17 @@ public class ServiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
 
-        imageClose = findViewById(R.id.icon_close_view5);
 
+
+        imageClose = findViewById(R.id.icon_close_view5);
+        recyclerView =findViewById(R.id.rc_service_detail);
         //Close activity
         imageClose.setOnClickListener(v -> {
             finish();
         });
-        recyclerView =findViewById(R.id.rc_service_detail);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
         services = new ArrayList<>();
         serviceListAdapter = new ServiceListAdapter(ServiceActivity.this);
 
@@ -71,8 +75,7 @@ public class ServiceActivity extends AppCompatActivity {
                 Toast.makeText(ServiceActivity.this, "false" , Toast.LENGTH_SHORT).show();
             }
         });
-            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-            recyclerView.setLayoutManager(linearLayoutManager);
+
 
     }
 

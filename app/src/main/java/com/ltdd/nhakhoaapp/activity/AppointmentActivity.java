@@ -62,7 +62,7 @@ public class AppointmentActivity extends AppCompatActivity {
     private TextView txtGone;
     private TextInputEditText edtGioKham, edtChuyenKhoa, edtBacsi, edtNgayKham,edtNote, edtName ,editDichvu;
 
-    private Button backTime,btnSpec, btnDoctor,btnNgayKham, btnService;
+    private Button backTime,btnSpec, btnDoctor,btnNgayKham, btnService ,btnDatlich;
     private AlertDialog dialogC,dialogA,dialogB, dialogD;
 
     private String period;
@@ -96,7 +96,7 @@ public class AppointmentActivity extends AppCompatActivity {
 
 
 
-        btnNgayKham = findViewById(R.id.btnNgayKham);
+        btnDatlich = findViewById(R.id.btnDatlich);
         txtGone = findViewById(R.id.txt_gone);
         specialists = new ArrayList<>();
         services = new ArrayList<>();
@@ -115,7 +115,7 @@ public class AppointmentActivity extends AppCompatActivity {
         edtName.setText(name);
 
         edtNgayKham.setOnClickListener(v -> onClickEdtNgayKham());
-        btnNgayKham.setOnClickListener(v -> saveAppointment());
+        btnDatlich.setOnClickListener(v -> saveAppointment());
 
         //Close activity
         imgClose.setOnClickListener(v -> {
@@ -389,9 +389,12 @@ public class AppointmentActivity extends AppCompatActivity {
     private List<Time> getListTime() {
         List<Time> timeList = new ArrayList<>();
         timeList.add(new Time("6:00-7:00"));
+        timeList.add(new Time("7:00-8:00"));
         timeList.add(new Time("8:00-9:00"));
+        timeList.add(new Time("9:00-10:00"));
         timeList.add(new Time("10:00-11:00"));
         timeList.add(new Time("13:00-14:00"));
+        timeList.add(new Time("14:00-15:00"));
         timeList.add(new Time("15:00-16:00"));
        return  timeList;
     }

@@ -50,12 +50,7 @@ public class InforAppointmentActivity extends AppCompatActivity {
         imgClose.setOnClickListener(v -> {
             finish();
         });
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         Long patientId = sharedPreferences.getLong("patientId", -1);

@@ -41,8 +41,6 @@ public class InforAppointmentIdActivity extends AppCompatActivity {
 //        btnBack.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-////                Intent intent =new Intent(InforAppointmentIdActivity.this, MainActivity.class);
-////                startActivity(intent);
 //                finish();
 //            }
 //        });
